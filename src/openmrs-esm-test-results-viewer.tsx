@@ -12,3 +12,9 @@ const lifecycles = singleSpaReact({
 export const bootstrap = lifecycles.bootstrap;
 export const mount = lifecycles.mount;
 export const unmount = lifecycles.unmount;
+export const importTranslation = require.context(
+  "../translations",
+  false,
+  /.json$/,
+  "lazy"
+);
