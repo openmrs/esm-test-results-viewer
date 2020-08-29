@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Microfrontend for the open-mrs test results",
   "main": "dist/openmrs-esm-test-results-viewer.js",
-  "types": "src/openmrs-esm-patient-chart.tsx",
+  "types": "src/openmrs-esm-test-results-viewer.tsx",
   "license": "MPL-2.0",
   "homepage": "https://github.com/openmrs/esm-test-results-viewer/blob/master/README.md",
   "scripts": {
