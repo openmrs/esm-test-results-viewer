@@ -1,3 +1,3 @@
 import { setPublicPath } from "systemjs-webpack-interop";
 
-setPublicPath("@openmrs/esm-test-results-viewer");
+setPublicPath("@openmrs/esm-test-results-viewer-app");
