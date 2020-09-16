@@ -3,8 +3,10 @@ import TestReportComponent from "./test-report.component";
 
 export default function TestResultsViewerComponent() {
   return (
-    <div>
-      <TestReportComponent />
-    </div>
+    <main className={`omrs-main-content`}>
+      <div>
+        <TestReportComponent />
+      </div>
+    </main>
   );
 }

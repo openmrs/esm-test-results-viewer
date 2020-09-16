@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import TestResultsViewerComponent from "./test-results-viewer/test-results-viewer.component";
 
 function Root(props) {
-  console.log("testing");
   return (
     <BrowserRouter basename={window["getOpenmrsSpaBase"]()}>
       <Route
@@ -17,5 +16,5 @@ function Root(props) {
 
 export default openmrsRootDecorator({
   featureName: "test-results-viewer",
-  moduleName: "@openmrs/esm-test-results-viewer"
+  moduleName: "@openmrs/esm-test-results-viewer-app"
 })(Root);
