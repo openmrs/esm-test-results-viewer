@@ -1,0 +1,13 @@
+.highRange {
+  color: var(--omrs-color-danger);
+}
+
+.testDetail {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.testDetail div {
+  width: 30%;
+}
