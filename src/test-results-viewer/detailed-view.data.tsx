@@ -30,7 +30,7 @@ const detailedViewDataMap: DetailedDataView = {
         },
         {
           date: new Date("2020-05-16 12:00:00"),
-          value: 09,
+          value: 9,
           result: TestResult.Low
         },
         {
@@ -57,7 +57,7 @@ const detailedViewDataMap: DetailedDataView = {
         },
         {
           date: new Date("2020-05-16 12:00:00"),
-          value: 09,
+          value: 9,
           result: TestResult.Low
         },
         {

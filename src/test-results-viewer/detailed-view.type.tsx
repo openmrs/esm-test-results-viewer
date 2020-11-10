@@ -16,12 +16,12 @@ export type TestDetailObject = {
 
 export type TestResultValueType = {
   date: Date;
-  value: Number;
+  value: number;
   result: TestResult;
 };
 
 export type ValueRange = {
-  lowerRange: String;
-  upperRange: String;
-  unit: String;
+  lowerRange: string;
+  upperRange: string;
+  unit: string;
 };
