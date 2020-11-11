@@ -1,5 +1,5 @@
-import { TestResult } from "./test-results-viewer.types";
-import { DetailedDataView } from "./detailed-view.type";
+import { TestResult } from "../test-results-overview/types/test-results-overview.types";
+import { DetailedDataView } from "./detailed-view.types";
 
 const detailedViewDataMap: DetailedDataView = {
   testCategory: "Blood Cell Profile and Diff",

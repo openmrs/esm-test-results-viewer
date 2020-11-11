@@ -1,4 +1,4 @@
-import { TestResult } from "./test-results-viewer.types";
+import { TestResult } from "../test-results-overview/types/test-results-overview.types";
 
 export type DetailedDataView = {
   testCategory: string;

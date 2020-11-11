@@ -1,5 +1,5 @@
 import React from "react";
-import { TestResult } from "./test-results-viewer.types";
+import { TestResult } from "../types/test-results-overview.types";
 import * as styles from "./test-details.component.css";
 
 export default function TestDetailsComponent(props: any) {

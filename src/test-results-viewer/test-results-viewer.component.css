@@ -1,0 +1,7 @@
+.leftPane {
+  width: 25%;
+  border: solid;
+  border-width: thin;
+  border-color: lightgray;
+  margin-left: 0.5em;
+}
