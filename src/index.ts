@@ -1,6 +1,6 @@
 import "./set-public-path";
-import { ExtensionDefinition, attach } from "@openmrs/esm-extension-manager";
 import { backendDependencies } from "./openmrs-backend-dependencies";
+import { getAsyncLifecycle } from "@openmrs/esm-react-utils";
 
 const importTranslation = require.context(
   "../translations",
@@ -9,22 +9,25 @@ const importTranslation = require.context(
   "lazy"
 );
 
-const extensions: Array<ExtensionDefinition> = [
-  {
-    appName: "@openmrs/esm-test-results-viewer-app",
-    name: "test-results-viewer-link",
-    load: () => import("./test-results-viewer-link")
-  }
-];
-
 function setupOpenMRS() {
+  const options = {
+    featureName: "test-results-viewer",
+    moduleName: "@openmrs/esm-test-results-viewer-app"
+  };
   return {
-    lifecycle: () => import("./openmrs-esm-test-results-viewer"),
+    lifecycle: getAsyncLifecycle(() => import("./root.component"), options),
     activate: "test-results-viewer",
-    extensions: extensions
+    extensions: [
+      {
+        id: "test-results-viewer-link",
+        slot: "home-page-buttons",
+        load: getAsyncLifecycle(
+          () => import("./test-results-viewer-link"),
+          options
+        )
+      }
+    ]
   };
 }
-
-attach("home-page-buttons", "test-results-viewer-link");
 
 export { backendDependencies, importTranslation, setupOpenMRS };

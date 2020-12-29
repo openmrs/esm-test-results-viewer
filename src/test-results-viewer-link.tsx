@@ -1,25 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
-import { navigateToUrl } from "single-spa";
+import { ConfigurableLink } from "@openmrs/esm-react-utils";
 
-export default singleSpaReact({
-  React,
-  ReactDOM,
-  rootComponent: TestResultsViewer
-});
-
-export function TestResultsViewer(props) {
-  const className = `omrs-link omrs-filled-neutral`;
-  const url = "/openmrs/spa/test-results-viewer";
-  const button = (
-    <a
-      className={className}
-      href={url}
-      onClick={event => navigateToUrl(event, url)}
+export default function Root() {
+  return (
+    <ConfigurableLink
+      className="omrs-link omrs-filled-neutral"
+      to="${openmrsSpaBase}/test-results-viewer"
     >
       Test Results Viewer
-    </a>
+    </ConfigurableLink>
   );
-  return button;
 }

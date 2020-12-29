@@ -3,7 +3,10 @@ const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.ts"),
+  entry: [
+    path.resolve(__dirname, "src/set-public-path.ts"),
+    path.resolve(__dirname, "src/index.ts")
+  ],
   output: {
     filename: "openmrs-esm-test-results-viewer-app.js",
     libraryTarget: "system",
